@@ -3,6 +3,6 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "node bot.js"
+    "start": "node whatsapp-bot-master/bot.js"
   }
 }
