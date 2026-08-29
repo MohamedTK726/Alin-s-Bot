@@ -2,13 +2,13 @@
   "name": "bottus",
   "version": "1.2.8",
   "description": "A whatsapp User bot",
-  "main": "./whatsAsena/bot.js",
+  "main": "bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lyfe00011/whatsapp-bot.git"
+    "url": "https://github.com/MohamedTK726/Alin-s-Bot"
   },
   "keywords": [
     "whatsapp",
@@ -18,9 +18,9 @@
   "author": "lyfe00011",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/lyfe00011/whatsapp-bot/issues"
+    "url": "https://github.com/MohamedTK726/Alin-s-Bot/issues"
   },
-  "homepage": "https://github.com/lyfe00011/whatsapp-bot#readme",
+  "homepage": "https://github.com/MohamedTK726/Alin-s-Bot/whatsapp-bot-master#readme",
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "axios": "^0.21.1",
@@ -50,4 +50,12 @@
     "yt-search": "^2.5.0",
     "ytdl-core": "^4.8.3"
   }
+  {
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node bot.js"
+  }
+}
 }
