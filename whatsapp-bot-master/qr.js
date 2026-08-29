@@ -3,12 +3,13 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - MohamedTawfik
+Alin - MohamedTawfik
 */
 
 const chalk = require('chalk');
 const {WAConnection} = require('@adiwajshing/baileys');
 const {StringSession} = require('./whatsasena/');
+const Config = require('./config');
 const fs = require('fs');
 
 async function whatsAsena () {
@@ -19,17 +20,17 @@ async function whatsAsena () {
     conn.regenerateQRIntervalMs = 30000;
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
+        console.log(`${chalk.green.bold(Config.BOT_NAME)}
+${chalk.white.italic('مولّد جلسة Alin')}
 
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')}`);
+${chalk.blue.italic('ℹ️  Alin بيتصل بواتساب... استنى يا نجم.')}`);
     });
     
 
     conn.on('open', () => {
         var st = Session.createStringSession(conn.base64EncodedAuthInfo());
         console.log(
-            chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
+            chalk.green.bold('كود جلسة Alin: '), Session.createStringSession(conn.base64EncodedAuthInfo())
         );
         
         if (!fs.existsSync('config.env')) {
@@ -37,7 +38,7 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')}`);
         }
 
         console.log(
-            chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
+            chalk.blue.bold('حط الجلسة في الإعدادات وشغّل البوت بـ node bot.js.')
         );
         process.exit(0);
     });

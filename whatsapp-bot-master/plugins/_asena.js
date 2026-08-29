@@ -13,6 +13,17 @@ const { getName, readmore } = require("../Utilis/download")
 const Language = require("../language")
 const { textToStylist, addSpace } = require("../Utilis/Misc")
 const Lang = Language.getString("_asena")
+
+function displayCommand(pattern) {
+  const name = pattern
+    .toString()
+    .match(/(\W*)([A-Za-z0-9ğüşiöç]*)/)[2]
+  const arabic = Object.keys(Config.COMMAND_ALIASES).find(
+    (alias) => Config.COMMAND_ALIASES[alias] === name
+  )
+  return arabic || name
+}
+
 Asena.addCommand(
   { pattern: "list ?(.*)", fromMe: true, dontAddCommandList: true },
   async (message, match) => {
@@ -39,7 +50,7 @@ Asena.addCommand(
         }
         if (index == 4) CMD_HELP += readmore
         CMD_HELP += `${index} ${
-          match.length >= 3 ? HANDLER + match[2] : command.pattern
+          match.length >= 3 ? HANDLER + displayCommand(command.pattern) : command.pattern
         }\n${command.desc}\n\n`
       }
     })
@@ -63,7 +74,7 @@ Asena.addCommand(
         command.pattern !== undefined
       ) {
         commands.push(
-          command.pattern.toString().match(/(\W*)([A-Za-z0-9ğüşiöç]*)/)[2]
+          displayCommand(command.pattern)
         )
       }
     })

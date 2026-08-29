@@ -1,10 +1,12 @@
-## WhatsApp User Bot
+## Alin — بوت واتساب
 
-This is a Userbot based on WhatsAsena written by [MohamedTawfik](https://github.com/)
+ده بوت واتساب مبني على WhatsAsena باسم **Alin**، ومطوره هو **محمد توفيق**
+على الرقم **+201005560325**.
 
-## What is WhatsAsena?
+## ما هو Alin؟
 
-**WhatsAsena,** is a WhatsApp bot written by [MohamedTawfik](https://github.com/). Does not log into your account It is written on WhatsApp Web API.
+**Alin** بوت شغال من خلال WhatsApp Web API. الأوامر والردود الأساسية متعربة باللهجة المصرية،
+والبادئة الافتراضية هي `.`
 
 ## Setup
 
@@ -111,5 +113,12 @@ This is a Userbot based on WhatsAsena written by [MohamedTawfik](https://github.
 </p>
 </details>
    
+### إعداد سريع
+
+1. حط قيمة `ASENA_SESSION` في Secrets أو متغيرات البيئة.
+2. شغّل البوت من داخل مجلد `whatsapp-bot-master`.
+3. المالك الافتراضي هو `+201005560325`، وتقدر تغييره من `OWNER_NUMBER`.
+4. اكتب `.help` لعرض الأوامر، أو اكتب البادئة لوحدها عشان Alin يقولك تكتب أمر.
+
 ### Thanks To
  [Baileys](https://github.com/adiwajshing/Baileys)

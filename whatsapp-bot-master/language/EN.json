@@ -1,8 +1,8 @@
 {
     "__ASENAJSON__": true,
-    "LANGUAGE": "English",
-    "LANGCODE": "en",
-    "AUTHOR": "AsenaDev",
+    "LANGUAGE": "العربية المصرية",
+    "LANGCODE": "ar",
+    "AUTHOR": "Alin",
     "STRINGS": {
         "_asena": {
             "DESC": "To Manage Chat bot.\n.lydia in chat to activate whole group\nReply to a person or mention to activate that person.",
